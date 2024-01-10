@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color:#000;
+    background-image: url("https://img.freepik.com/premium-photo/clouds-are-sky-with-bright-sun-background-generative-ai_899870-31098.jpg");
+    
+    background-repeat: no-repeat;
+   background-size: cover;
+}
+.container{
+    position: relative;
+}
+.clock{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/id/825778252/photo/blue-sky-and-white-clouds-background.jpg?s=612x612&w=0&k=20&c=u1jkNZutv8H344KPxrgtfIHOMuWdU4H8PQ7_rvSI-wI=");
+    background-repeat: no-repeat;
+   background-size: cover;
+    border: 5px solid white;
+   
+}
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b {
+    transform: rotate(calc(-30deg * var(--i))); 
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color:var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+
+    .clock {
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        height: 300px;
+    }
+    
+}
